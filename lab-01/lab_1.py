@@ -58,7 +58,7 @@ def linear_regression(X, y, eps=0):
     print("Eps: " + str(eps))
     #
     # <add 'eps' times the identity matrix to M>
-    M += eps*(identity(len(eps)))
+    M += eps*(identity(M.shape[0]))
     # Hints:
     # There is a function 'identity' in numpy to generate an identity matrix
     # The 'identity' function takes an integer parameter: the size of the (square) identity matrix
