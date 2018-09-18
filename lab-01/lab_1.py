@@ -29,8 +29,8 @@ def polynomial_design_matrix(x, order=1):
     # See slide 23 of the lecture 1 handout.
     # The exponentiation (power) operator in Python is '**'.
     # Assign to the element (row,col) of a numpy matrix with: M[r,c] = <expression>
-    for p in range(0, order+1)
-        for i in range(x.size)
+    for p in range(0, order+1):
+        for i in range(x.size):
             X[i,p] = x[i] ** p
     # Hint:
     # Outer loop: iterating over columns; each column gets a higher power
