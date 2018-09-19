@@ -29,16 +29,14 @@ def polynomial_design_matrix(x, order=1):
     # See slide 23 of the lecture 1 handout.
     # The exponentiation (power) operator in Python is '**'.
     # Assign to the element (row,col) of a numpy matrix with: M[r,c] = <expression>
-    for p in range(0, order+1):
-        for i in range(x.size):
-            X[i,p] = x[i] ** p
+
     # Hint:
     # Outer loop: iterating over columns; each column gets a higher power
     # for p in range(0, order+1):
     # Inner loop: iterating over rows: each row corresponds to an element of 'x'
     # for i in range(x.size):
     # Element (i,p) of X should be the ith element of 'x' to the power p:
-    #X[i,p] = <something>
+    X[i,p] = <something>
 
     return X
 
@@ -55,16 +53,14 @@ def linear_regression(X, y, eps=0):
 
     # EXERCISE 2: implement Tikhonov regularisation.
     # See lecture handout 1, slide 35.
-    print("Eps: " + str(eps))
-    A = np.identity(M.shape[0])
+    # print("Eps: " + str(eps))
+    #
     # <add 'eps' times the identity matrix to M>
-    M = M + eps * A
     # Hints:
     # There is a function 'identity' in numpy to generate an identity matrix
     # The 'identity' function takes an integer parameter: the size of the (square) identity matrix
     # The shape of a numpy matrix 'A' is accessed with 'A.shape' (no parentheses); this is a tuple
     # The number of rows in a matrix 'A' is then 'A.shape[0]' (or 'len(A)')
-    
     # You can add matrices with '+' -- so you will update 'M' with 'M = M + <amount> * <identity>'
     # Note that the amount of regularization is denoted 'alpha' in the slides but here it's 'eps'.
     theta = np.dot(np.linalg.inv(M), np.dot(X.transpose(), y))
@@ -75,9 +71,7 @@ def mean_squared_error(y1, y2):
     # You can use '-' to compute the elementwise difference of numpy vectors (i.e. y1 - y2).
     # You can use '**' for elementwise exponentiation of a numpy vector.
     # You can use the numpy function 'mean' to compute the mean of a vector.
-    SR = (y1-y2)**2
-    MSE = np.mean(SR)
-    return MSE  # replace this with your answer.
+    return 0  # replace this with your answer.
 
 # EXERCISE 4: return the number of the best order for the supplied
 # data (see the notebook).
