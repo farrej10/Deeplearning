@@ -113,7 +113,6 @@ def predict_class(w, X, t):
     
     M = predict(w,X) > t
     return M
-    #return np.zeros((X.shape[0],1))
 
 #
 # #### EXERCISE 5 ####
@@ -123,4 +122,4 @@ def predict_class(w, X, t):
 # What is the accuracy of your classifier for a threshold of 0.5
 
 def question_5():
-    return 0
+    return 0.9725
