@@ -112,7 +112,7 @@ def predict_class(w, X, t):
     # replace with a vector of comparisons of a call to predict with 't':
     
     
-    return np.exp(t)/np.sum(t)
+    return predict(w,X)/np.sum(predict(w,X))
     #return np.zeros((X.shape[0],1))
 
 #
